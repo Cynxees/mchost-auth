@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package mchost_auth.service.v1;
+option go_package = "./pb";
+
+import "proto/mchost_auth_payload.proto";
+
+service UserService {
+  rpc GetUser (GetUserRequest) returns (GetUserResponse);
+  rpc RegisterUser (RegisterUserRequest) returns (RegisterUserResponse);
+  rpc LoginUser (LoginUserRequest) returns (LoginUserResponse);
+  rpc VerifyToken (VerifyTokenRequest) returns (VerifyTokenResponse);
+}
